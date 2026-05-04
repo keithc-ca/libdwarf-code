@@ -1,3 +1,54 @@
+2026-05-04:  Mehdi
+    commit 156c8bf0cc635facd05833b1d2024eee6f82969b
+
+    Set end sequence and epilogue begin separately (#323)
+o
+    The change in dwarf_line_table_reader_common.h is
+    - curr_line->li_l_data.li_end_sequence =
+    - curr_line->li_l_data.
+    - li_epilogue_begin = regs.lr_epilogue_begin;
+    + curr_line->li_l_data.li_end_sequence = regs.lr_end_sequence;
+    + curr_line->li_l_data.li_epilogue_begin = regs.lr_epilogue_begin;
+    The old version made every EB show ET as well. The change
+    removes the ET from dwarfdump output.
+    dwarfdump shorthand is documented in dwarfdump output and
+    is:
+    BB new basic block
+    ET end of text sequence 
+    EB epilogue begin
+    NS new statement
+    PE prologue end
+    IS=val ISA number
+
+
+2026-04-03:  flagarde
+    commit 1a62beb8510500b19c290d565e91f85eac8fb998
+
+    clean (#319)
+
+    Removes several lines of repetetive cmake setup for each example build/test.
+
+2026-03-31:  David Anderson
+    commit 6c0cd4aa1857fedac7b89d8e801b1f33fe98cbef
+
+    Small tweak. cmake version is minumum required.
+            modified:   READMEcmake.md
+
+2026-03-31:  David Anderson
+    commit 2555b41c6bbd93e578eedccd859cfc98d89a83da
+
+    New update date
+            modified:   README.md
+    Mentions requirement of cmake 3.12 as of  31 March 2026
+            modified:   READMEcmake.md
+
+2026-03-31:  David Anderson
+    commit e8285bfaf754a59b966256ad2868dbc0cc8cd1d9
+
+    Now with version updated to 2.3.2
+    and cmake build script updates
+            modified:   ChangeLog
+
 2026-03-31:  David Anderson
     commit 6954b083193fb6bbc87d45db791589a2fa0c8af9
 
