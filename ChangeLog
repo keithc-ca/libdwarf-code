@@ -1,3 +1,11 @@
+2026-05-04:  David Anderson
+    commit 95e2a516a4333f57875469a1b4ea86f0c5d96686
+
+            Documenting the line table change in more detail.
+            modified:   ChangeLog
+    Shortened lines, removed a trailing space character.
+            modified:   src/lib/libdwarf/dwarf_line_table_reader_common.h
+
 2026-05-04:  Mehdi
     commit 156c8bf0cc635facd05833b1d2024eee6f82969b
 
