@@ -3,7 +3,7 @@
     @tableofcontents{HTML:3,LaTeX:3}
     @author David Anderson
     @copyright  This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-    @date 2026-06-15 v2.3.2
+    @date 2026-07-07 v2.3.2
 
     @section draft Suggestions for improvement are welcome.
 
@@ -1204,16 +1204,21 @@
 
     <b>Changes 2.3.1 to 2.3.2</b>
 
+    Released 7 July 2026.
+
     Now libdwarf will decompress any library-relevant 
     compressed Elf sections.  In previous versions
     only a small subset of Elf sections could be decompressed.
 
     The new code was detected as having vulnerabilities
-    by oss fuzz systems. Documented as DW202605-001
-    and DW202605-002 and DW202605-003.
-    Fixed 16 May 2026 for 2.3.2.
+    by oss fuzz systems, some testing against
+    corrupted Mach-o object files. Documented as DW202605-001,
+    DW202605-002, DW202605-003, DW202605-004, DW202605-005,
+    DW202605-006, DW202605-007, DW202605-008.
 
     <b>Changes 2.3.0 to 2.3.1</b>
+
+    Released 4 March 2026.
 
     Fixed vulnerability oss fuzz 4475563464 (aka
     libdwarf DW202602-001) reading frame data from
