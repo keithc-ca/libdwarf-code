@@ -1,3 +1,44 @@
+2026-07-07:  David Anderson
+    commit 8ec346fdb44ef6eee0e3e0586a0c612a252d1050
+
+    Ready for 2.3.2 release
+            modified:   README.md
+            modified:   doc/libdwarf.dox
+            modified:   doc/libdwarf.pdf
+
+2026-07-07:  David Anderson
+    commit 78b5174e892a4cddf3217e31d42e17afb4a08ff1
+
+    Update of current month
+            modified:   bugxml/dwarfbug.html
+            modified:   bugxml/dwarfbuglohi.html
+
+2026-06-27:  David Anderson
+    commit a3035cfc5ccb016bf5a4da6f77d4ee2ad6859f10
+
+    Corrects issue coverityscan found (new, mistakes in
+    last commit). Now passes regressiontests and no
+    defects found by coverityscan.
+            modified:   src/lib/libdwarf/dwarf_elf_load_headers.c
+
+2026-06-27:  David Anderson
+    commit e38feba2ec962f0edc4c3149fb1f57d10d74de7c
+
+    CoverityScan reported use-after-free in read_gs_section_group()
+    which I think was a false positive.
+    I revised the function internals to be (IMHO) clearer in using the
+    local variables 'dp' and 'data' and it passed CoverityScan
+    with no problem. No defects.
+    Do NOT use this commit. The change intrduced duplicate
+    free()... oops.
+            modified:   src/lib/libdwarf/dwarf_elf_load_headers.c
+
+2026-06-18:  David Anderson
+    commit 98050bd6320df0446b3f5546d619536fb5fe0601
+
+    Up to date
+            modified:   ChangeLog
+
 2026-06-18:  David Anderson
     commit 9e1beb79105a7dae582e3b542565d449bd931241
 
