@@ -22,7 +22,7 @@
 <references> regressiontests/ossfuzz516582687/fuzz_gdbindex-5725564647571456
 </references>
 <gitfixid>6e6d732a3b921d7f771b0bfe417a3e3c47520dac</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-007</dwid>
@@ -43,7 +43,7 @@
 <references> regressiontests/ossfuzz514729017/fuzz_die_cu_e_print-4644164729110528
 </references>
 <gitfixid>12162ed757c510b06b8b53154e8f971053164ba3</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-006</dwid>
@@ -63,7 +63,7 @@
 <references> regressiontests/ossfuzz514753154/fuzz_showsectgrp-5634424300699648
 </references>
 <gitfixid>f49716564b3a263ce81c5319fecea4c9319e178f</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-005</dwid>
@@ -85,7 +85,7 @@
 <references> regressiontests/ossfuzz514727740/fuzz_init_b-4646656783220736
 </references>
 <gitfixid>f49716564b3a263ce81c5319fecea4c9319e178f</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-004</dwid>
@@ -106,7 +106,7 @@
 <references> regressiontests/ossfuzz488137256/fuzz_die_cu-4889329913888768
 </references>
 <gitfixid>f45f68da5c107bdfbc82fd4d4662048ffe12ab88</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-003</dwid>
@@ -130,7 +130,7 @@
 <references> regressiontests/ossfuzz513010516/fuzz_dnames-5764687336898560
 </references>
 <gitfixid>4c8aecaf95f94ff4baa8840ea90df7b5fd14a71f</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-002</dwid>
@@ -151,8 +151,8 @@
 <datefixed>2026-05-16</datefixed>
 <references> regressiontests/ossfuzz513032442/fuzz_findfuncbypc-5181686974578688
 </references>
-<gitfixid></gitfixid>
-<tarrelease></tarrelease>
+<gitfixid>27a19350b16995730d82fd1c224a7f22b39c443c</gitfixid>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202605-001</dwid>
@@ -173,7 +173,7 @@
 <references> regressiontests/ossfuzz513063397/fuzz_init_b-6754026074210304
 </references>
 <gitfixid>27a19350b16995730d82fd1c224a7f22b39c443c</gitfixid>
-<tarrelease></tarrelease>
+<tarrelease>libdwarf-2.3.2.tar.xz</tarrelease>
 </dwbug>
 <dwbug>
 <dwid>DW202602-001</dwid>
