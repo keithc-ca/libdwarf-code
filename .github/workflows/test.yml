@@ -228,7 +228,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: tools
-      run:  brew install automake libtool
+      run:  |
+        brew untap aws/tap
+        brew install automake libtool
     - name: autoreconf
       run: autoreconf --warnings=all  -vif
     - name: config
@@ -254,7 +256,9 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: brew
-      run: brew install meson
+      run: |
+        brew untap aws/tap
+        brew install meson
     - name: meson
       run:  |
         mkdir builddir && cd builddir
