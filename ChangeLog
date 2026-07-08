@@ -1,3 +1,45 @@
+2026-07-08:  David Anderson
+    commit bcf2323336a9e962da795afea6f16c2054803704
+    Merge: 4eeea8a8 881d21f5
+
+    Merge branch 'main' of https://github.com/davea42/libdwarf-code
+    Remote fix of a github action. Merging it here.
+
+2026-07-08:  David Anderson
+    commit 4eeea8a8d08da6db887fd805dee73b3527921188
+
+    Adding
+      brew untap aws/ta[p
+    To eliminate warnings in
+    macos_meson
+    and macos_autotools
+    This is a recent change in the way actions
+    work for MacOS as part of moving to the
+    most recent Mac release in actions (by github itself). 
+            modified:   .github/workflows/test.yml
+
+2026-07-08:  David Anderson
+    commit 881d21f50e751dffed2ff048b8ef002531f86e29
+
+    Update mac_meson.yml
+
+    Trying untap aws/tap to remove warning
+
+2026-07-07:  David Anderson
+    commit af7b278c6aa2ae9daad94fb7f8bffdc0e9980993
+
+    Updated with gitfixid and tarrelease data for 2.3.2
+            modified:   bugxml/data.txt
+            modified:   bugxml/dwarfbug.html
+            modified:   bugxml/dwarfbug.xml
+            modified:   bugxml/dwarfbuglohi.html
+
+2026-07-07:  David Anderson
+    commit ed568e07420b7b44718ab13ff2c014a8c64d5a2b
+
+    Up to date
+            modified:   ChangeLog
+
 2026-07-07:  David Anderson
     commit 8ec346fdb44ef6eee0e3e0586a0c612a252d1050
 
