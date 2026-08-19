@@ -1,3 +1,25 @@
+2026-08-19:  David Anderson
+    commit 74e87729ad0ee629e7abf814619b40841343b146
+
+    Now ensures the maximum operations per instruction field
+    of the DWARF4,5 header is > 0. Returns ERROR if not.
+    (the value is used as divisor).
+    Internally recorded in line_context->lc_maximum_ops_per_instruction
+            modified:   src/lib/libdwarf/dwarf_line_table_reader_common.h
+
+2026-08-19:  David Anderson
+    commit 5db2f2fd98f20772880f697628e91905bc11d7fa
+
+    Update current month name
+            modified:   bugxml/dwarfbug.html
+            modified:   bugxml/dwarfbuglohi.html
+
+2026-07-08:  David Anderson
+    commit 74abe1dcbdd92f814f2086cb5b29eac66e3e512d
+
+    Up to date with yaml github action changes.
+            modified:   ChangeLog
+
 2026-07-08:  David Anderson
     commit bcf2323336a9e962da795afea6f16c2054803704
     Merge: 4eeea8a8 881d21f5
