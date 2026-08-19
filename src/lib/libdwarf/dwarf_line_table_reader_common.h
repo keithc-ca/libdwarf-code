@@ -328,6 +328,21 @@ _dwarf_read_line_table_header(Dwarf_Debug dbg,
         }
         line_context->lc_maximum_ops_per_instruction =
             *(unsigned char *) line_ptr;
+        /*  This field did not exist in header before DWARF4 */
+        if (0 == line_context->lc_maximum_ops_per_instruction) {
+            dwarfstring m;
+            
+            dwarfstring_constructor(&m);
+            _dwarf_error_string(dbg,err, 
+               DW_DLE_LINE_NUMBER_HEADER_ERROR,
+               "DW_DLE_LINE_NUMBER_HEADER_ERROR: "
+               "maximum_operations_per_second is zero");
+            dwarfstring_destructor(&m);
+            /*  In case we later rely on the value, ensure
+                will not divide by zero. */
+            line_context->lc_maximum_ops_per_instruction = 1;
+            return DW_DLV_ERROR;
+        }
         line_ptr = line_ptr + sizeof(Dwarf_Small);
     }
     if (line_ptr >= line_ptr_end) {
