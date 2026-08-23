@@ -328,7 +328,9 @@ _dwarf_read_line_table_header(Dwarf_Debug dbg,
         }
         line_context->lc_maximum_ops_per_instruction =
             *(unsigned char *) line_ptr;
-        /*  This field did not exist in header before DWARF4 */
+        /*  This field did not exist in header before DWARF4.
+            In actual use we treat 0 as if it were one.
+            See uses later here. */
         if (0 == line_context->lc_maximum_ops_per_instruction) {
             dwarfstring m;
             
