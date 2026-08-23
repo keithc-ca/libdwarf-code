@@ -1,3 +1,30 @@
+2026-08-23:  David Anderson
+    commit 14f04d47f8d7a79f748105c15352d359410cc653
+
+    Now all reflect the new version of 2.3.3.
+            modified:   CMakeLists.txt
+            modified:   configure.ac
+            modified:   doc/libdwarf.dox
+            modified:   doc/libdwarfp.mm
+            modified:   meson.build
+            modified:   scripts/allsimplebuilds.sh
+            modified:   src/lib/libdwarf/libdwarf.h
+            modified:   tools/makerelease.sh
+
+2026-08-23:  David Anderson
+    commit 49bd4bc634d96a907f8a961cc5f4ec79505c6fe7
+
+    Clarified the new comments about checking
+    line_context->lc_maximum_ops_per_instruction
+    to avoid having it be zero.
+            modified:   src/lib/libdwarf/dwarf_line_table_reader_common.h
+
+2026-08-19:  David Anderson
+    commit aecc146edb2f5f00b099ba9460f9e15c3e5b7b1e
+
+    Up to date with git log now.
+            modified:   ChangeLog
+
 2026-08-19:  David Anderson
     commit 74e87729ad0ee629e7abf814619b40841343b146
 
