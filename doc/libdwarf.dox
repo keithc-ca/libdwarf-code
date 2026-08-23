@@ -3,7 +3,7 @@
     @tableofcontents{HTML:3,LaTeX:3}
     @author David Anderson
     @copyright  This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-    @date 2026-07-07 v2.3.2
+    @date 2026-08-23 v2.3.3
 
     @section draft Suggestions for improvement are welcome.
 
@@ -1201,6 +1201,14 @@
     @section dwsec_changes Recent Changes
 
     We list these with newest first.
+
+    <b>Changes 2.3.2 to 2.3.3</b>
+
+    Now detects a (corrupted) DWARF4 or later
+    line table header with 
+    maximum operations per instruction
+    of zero and returns an error.
+    To avoid than later crashing on division by zero.
 
     <b>Changes 2.3.1 to 2.3.2</b>
 

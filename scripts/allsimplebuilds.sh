@@ -15,7 +15,7 @@ then
 fi
 
 spath=`pwd`
-d=2.3.2
+d=2.3.3
 tpath="/tmp/allsimple-v$d"
 bbase=$tpath
 tbase="/tmp/allsimpleinstalled-v$d"
