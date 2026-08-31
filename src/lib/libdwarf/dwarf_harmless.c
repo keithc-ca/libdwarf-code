@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2010-2022 David Anderson. All Rights Reserved.
+  Copyright (C) 2010-2026 David Anderson. All Rights Reserved.
   Portions Copyright 2012 SN Systems Ltd. All rights reserved.
 
   This program is free software; you can redistribute it
@@ -54,6 +54,7 @@
 #include <config.h>
 
 #include <stddef.h>  /* size_t */
+#include <stdio.h>   /* for debugging this code */
 #include <stdlib.h>  /* free() malloc() */
 #include <string.h>  /* memcpy() strcpy() strlen() */
 

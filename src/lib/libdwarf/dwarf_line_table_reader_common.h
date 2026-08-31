@@ -1,6 +1,6 @@
 /*
    Copyright (C) 2000-2006 Silicon Graphics, Inc.  All Rights Reserved.
-   Portions Copyright (C) 2007-2023 David Anderson. All Rights Reserved.
+   Portions Copyright (C) 2007-2026 David Anderson. All Rights Reserved.
    Portions Copyright (C) 2010-2012 SN Systems Ltd. All Rights Reserved.
    Portions Copyright (C) 2015-2015 Google, Inc. All Rights Reserved.
 
@@ -31,7 +31,7 @@
 
 /*  This is #included twice. Once for
     libdwarf callers and one for dwarfdump which prints
-    the internals.
+    the line table internals.
 
     This way we have just one blob of code that reads
     the table operations.  */
@@ -328,22 +328,21 @@ _dwarf_read_line_table_header(Dwarf_Debug dbg,
         }
         line_context->lc_maximum_ops_per_instruction =
             *(unsigned char *) line_ptr;
-        /*  This field did not exist in header before DWARF4.
+        /*  This field did not exist in line header before DWARF4.
             In actual use we treat 0 as if it were one.
-            See uses later here. */
+            See uses later here. Run dwarfdump with -ka
+            on an appropriate object file to see this reported. */
         if (0 == line_context->lc_maximum_ops_per_instruction) {
-            dwarfstring m;
-            
-            dwarfstring_constructor(&m);
-            _dwarf_error_string(dbg,err, 
-               DW_DLE_LINE_NUMBER_HEADER_ERROR,
-               "DW_DLE_LINE_NUMBER_HEADER_ERROR: "
-               "maximum_operations_per_second is zero");
-            dwarfstring_destructor(&m);
-            /*  In case we later rely on the value, ensure
-                will not divide by zero. */
+            if (0 == _dw_linetab_harmless_reported) {
+                _dw_linetab_harmless_reported = 1;
+                dwarf_insert_harmless_error(dbg,
+                    "DW_DLE_LINE_NUMBER_HEADER_ERROR(harmless error): "
+                    "maximum_operations_per_second is zero");
+            }
+            /*  In case we later improperly rely on the value at some
+                time, ensure we will not divide by zero.  As of August
+                2026 this assignment is not needed. */
             line_context->lc_maximum_ops_per_instruction = 1;
-            return DW_DLV_ERROR;
         }
         line_ptr = line_ptr + sizeof(Dwarf_Small);
     }

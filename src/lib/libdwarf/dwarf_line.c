@@ -1,5 +1,5 @@
 /* Copyright (C) 2000-2006 Silicon Graphics, Inc.  All Rights Reserved.
-   Portions Copyright (C) 2007-2020 David Anderson. All Rights Reserved.
+   Portions Copyright (C) 2007-2026 David Anderson. All Rights Reserved.
    Portions Copyright (C) 2010-2012 SN Systems Ltd. All Rights Reserved.
    Portions Copyright (C) 2015-2015 Google, Inc. All Rights Reserved.
 
@@ -33,6 +33,7 @@
 #ifdef HAVE_STDINT_H
 #include <stdint.h> /* uintptr_t */
 #endif /* HAVE_STDINT_H */
+#include <stdio.h> /* for debugging */
 #include <stdlib.h> /* free() malloc() realloc() */
 #include <string.h> /* memset() strlen() */
 
@@ -72,6 +73,12 @@ static struct Dwarf_Line_Registers_s
     /* Dwarf_Unsigned lr_call_context */  0,
     /* Dwarf_Unsigned lr_subprogram */  0,
 };
+
+/*  Exists to avoid duplicate warning  of a harmless
+    error of zero maximum_operations_per  operator from
+    DWARF4,5 line table header. */
+int _dw_linetab_harmless_reported;
+
 
 void
 _dwarf_set_line_table_regs_default_values(Dwarf_Line_Registers regs,

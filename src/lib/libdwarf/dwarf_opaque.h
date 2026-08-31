@@ -1,6 +1,6 @@
 /*
   Copyright (C) 2000-2005 Silicon Graphics, Inc.  All Rights Reserved.
-  Portions Copyright (C) 2007-2024 David Anderson. All Rights Reserved.
+  Portions Copyright (C) 2007-2026 David Anderson. All Rights Reserved.
   Portions Copyright (C) 2008-2010 Arxan Technologies, Inc. All Rights Reserved.
 
   This program is free software; you can redistribute it
@@ -1258,3 +1258,7 @@ _dwarf_entrypc(Dwarf_Die die,
     Dwarf_Error *error);
 int _dwarf_get_suppress_debuglink_crc(void);
 void _dwarf_dumpsig(const char *msg, Dwarf_Sig8 *sig, int lineno);
+
+/*  solely to avoid duplicate reporting of a warning 
+    reading a line table header.  */
+extern int _dw_linetab_harmless_reported;
