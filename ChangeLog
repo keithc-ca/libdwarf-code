@@ -1,3 +1,24 @@
+2026-08-31:  David Anderson
+    commit 5920382cfb0f2cecae5d1faf476184bf16eb8cac
+
+    Revised handling of zero value of
+    lc_maximum_ops_per_instruction from line table header.
+    Now there is no error, but with dwarfdump -ka
+    one gets a single harmless error notification if the
+    maximum operations per instruction is zero.
+    (Only one such is reported regardless of the number
+    of corrupt line table headers).
+            modified:   src/lib/libdwarf/dwarf_harmless.c
+            modified:   src/lib/libdwarf/dwarf_line.c
+            modified:   src/lib/libdwarf/dwarf_line_table_reader_common.h
+            modified:   src/lib/libdwarf/dwarf_opaque.h
+
+2026-08-23:  David Anderson
+    commit e21b5ad2e0d02586915798b6681cc3549ddca6c5
+
+    Up to date now
+            modified:   ChangeLog
+
 2026-08-23:  David Anderson
     commit 14f04d47f8d7a79f748105c15352d359410cc653
 
